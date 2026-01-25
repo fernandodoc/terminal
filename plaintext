@@ -166,6 +166,7 @@ financial-terminal/
 |  |  |  |  |  |  |__Evolução patrimonial: Nominal vs Real
 |  |  | 
 |  |  |__portfolio.py
+|  |  |  |  |__Contrate um especialista
 |  |  |__financial_health.py
 |  |  |__compound_interest.py
 |  |  |__stocks.py
