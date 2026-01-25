@@ -242,6 +242,22 @@ financial-terminal/
 |  |  |  |  |  |__Total em Juros
 |  |
 |  |  |__stocks.py
+|  |  |  |__Análise de ativos
+|  |  |  |  |__Ticker do ativo
+|  |  |  |  |__Período de análise
+|  |  |  |  |  |__Consultar
+|  |  |  |  |  |  |__Preço Atual
+|  |  |  |  |  |  |__Mín. 52 Semanas
+|  |  |  |  |  |  |__Máx. 52 Semanas
+|  |  |  |  |  |  |__Dividend Yield
+|  |  |  |  |  |  |  |__Indicadores de Valor e Saúde Financeira da Empresa
+|  |  |  |  |  |  |  |  |__P/L
+|  |  |  |  |  |  |  |  |__P/VP
+|  |  |  |  |  |  |  |  |__Margem Líquida
+|  |  |  |  |  |  |  |  |__ROE
+|  |  |  |  |  |  |  |  |__Dívida Líquida/EBITDA
+|  |  |  |  |  |  |  |  |__Payout
+|  |
 |  |  |__funds.py
 |  |  |__dividends.py
 |  |  |__backtesting.py
