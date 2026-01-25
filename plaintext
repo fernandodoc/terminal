@@ -73,6 +73,20 @@ financial-terminal/
 |  |  |  |  |__https://www.nytimes.com/
 |  |  |  |  |__https://www.barrons.com/
 |  |  |  |  |__https://www.investors.com/
+|  |  |__stock_exchange.py
+|  |  |  |__Monitor de Mercado Brasil - B3
+|  |  |  |  |__Ibovespa
+|  |  |  |  |__Volume Financeiro
+|  |  |  |  |__Mercado aberto (sim/não)
+|  |  |  |  |__Mais Negociadas | Maiores Altas | Maiores Baixas
+|  |  |  |  |__Market Heatmap
+|  |  |  |__Financial Visualizations
+|  |  |  |  |__https://finviz.com/
+|  |  |  |  |__Maps
+|  |  |  |  |__Futures
+|  |  |  |  |__Crypto
+|  |  |  |  |__Forex
+
 |  |  |__macro.py
 |  |  |
 |  |  |__calculators.py
