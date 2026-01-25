@@ -44,7 +44,7 @@ def render_news_portal():
         ("Fundamentus", "https://www.fundamentus.com.br/"),
         ("B3", "https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/empresas-listadas.htm"),
         ("CVM", "https://cvmweb.cvm.gov.br/SWB/Sistemas/SCW/CPublica/CiaAb/FormBuscaCiaAb.aspx?TipoConsult=c"),
-        ("Data 360 - World Bank", "https://data360.worldbank.org/en/economy/BRA"),
+        ("Data World Bank", "https://data360.worldbank.org/en/economy/BRA"),
         ("StatusInvest", "https://statusinvest.com.br/"),
         ("Investidor10", "https://investidor10.com.br/"),
         ("ADVFN", "https://br.advfn.com/"),
@@ -116,3 +116,4 @@ def render_news_portal():
                 </div>
 
             """, unsafe_allow_html=True)
+
