@@ -74,12 +74,26 @@ financial-terminal/
 |  |  |  |  |__https://www.barrons.com/
 |  |  |  |  |__https://www.investors.com/
 |  |  |__stock_exchange.py
-|  |  |  |__Monitor de Mercado Brasil - B3
+|  |  |  |__Brasil - B3
 |  |  |  |  |__Ibovespa
 |  |  |  |  |__Volume Financeiro
 |  |  |  |  |__Mercado aberto (sim/não)
 |  |  |  |  |__Mais Negociadas | Maiores Altas | Maiores Baixas
 |  |  |  |  |__Market Heatmap
+|  |  |  |__América do Norte
+|  |  |  |  |__NYSE (New York Stock Exchange): nyse.com
+|  |  |  |  |__Nasdaq: nasdaq.com
+|  |  |  |  |__TSX (Toronto Stock Exchange): tsx.com
+|  |  |  |__Europa
+|  |  |  |  |__Euronext: euronext.com
+|  |  |  |  |__London Stock Exchange (LSE): londonstockexchange.com
+|  |  |  |  |__Deutsche Börse (Frankfurt): deutsche-boerse.com
+|  |  |  |__Asia e Oceani
+|  |  |  |  |__JPX (Japan Exchange Group - Tóquio): jpx.co.jp
+|  |  |  |  |__HKEX (Hong Kong Exchanges): hkex.com.hk
+|  |  |  |  |__SSE (Shanghai Stock Exchange): sse.com.cn
+|  |  |  |  |__NSE (National Stock Exchange of India): nseindia.com
+|  |  |  |  |__ASX (Australian Securities Exchange): asx.com.au
 |  |  |  |__Financial Visualizations
 |  |  |  |  |__https://finviz.com/
 |  |  |  |  |__Maps
