@@ -44,7 +44,7 @@ def main():
     
     # --- SIDEBAR NAVEGAÇÃO ---
     st.sidebar.image("https://img.icons8.com/fluency/96/diamond.png", width=60)
-    st.sidebar.title("Navegacao")
+    st.sidebar.title("em desenvolvimento")
     
     # Mapeamento atualizado com ETFs e FIIs
     menu_options = {
@@ -136,4 +136,5 @@ def main():
     st.sidebar.caption("Versão: 1.0.0-PRO")
 
 if __name__ == "__main__":
+
     main()
