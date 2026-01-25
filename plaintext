@@ -38,8 +38,11 @@ financial-terminal/
 |  |  |  |__update_market_data.py
 |
 |__frontend
+|  |
 |  |__app.py
+|  |
 |  |__layout.py
+|  |
 |  |__callbacks/
 |  |  |__news.py
 |  |  |  |__Informações e fundamentos
@@ -73,6 +76,7 @@ financial-terminal/
 |  |  |  |  |__https://www.nytimes.com/
 |  |  |  |  |__https://www.barrons.com/
 |  |  |  |  |__https://www.investors.com/
+|  |  |
 |  |  |__stock_exchange.py
 |  |  |  |__Brasil - B3
 |  |  |  |  |__Ibovespa
@@ -88,7 +92,7 @@ financial-terminal/
 |  |  |  |  |__Euronext: euronext.com
 |  |  |  |  |__London Stock Exchange (LSE): londonstockexchange.com
 |  |  |  |  |__Deutsche Börse (Frankfurt): deutsche-boerse.com
-|  |  |  |__Asia e Oceani
+|  |  |  |__Asia e Oceania
 |  |  |  |  |__JPX (Japan Exchange Group - Tóquio): jpx.co.jp
 |  |  |  |  |__HKEX (Hong Kong Exchanges): hkex.com.hk
 |  |  |  |  |__SSE (Shanghai Stock Exchange): sse.com.cn
@@ -100,9 +104,47 @@ financial-terminal/
 |  |  |  |  |__Futures
 |  |  |  |  |__Crypto
 |  |  |  |  |__Forex
-
-|  |  |__macro.py
 |  |  |
+|  |  |__macro.py
+|  |  |  |__Macro Brasil
+|  |  |  |  |__Selic Meta
+|  |  |  |  |__Taxa DI
+|  |  |  |  |__IPCA (12m)
+|  |  |  |  |__Ibovespa
+|  |  |  |  |__Dólar Ptax
+|  |  |  |__Macro Global
+|  |  |  |  |__NYSE
+|  |  |  |  |__Nasdaq
+|  |  |  |  |__TSX
+|  |  |  |  |__Euronext
+|  |  |  |  |__London Stock Exchange
+|  |  |  |  |__Deutsche Börse
+|  |  |  |  |__JPX
+|  |  |  |  |__HKEX
+|  |  |  |  |__SSE
+|  |  |  |  |__NSE
+|  |  |  |  |__ASX
+|  |  |  |__Juros Globais
+|  |  |  |  |__EUA
+|  |  |  |  |__Japão
+|  |  |  |  |__Inglaterra
+|  |  |  |  |__França
+|  |  |  |  |__Japão
+|  |  |  |  |__Alemanha
+|  |  |  |  |__Itália
+|  |  |  |  |__Suíça
+|  |  |  |  |__Suécia
+|  |  |  |__Commodities Estratégicas
+|  |  |  |  |__Petróleo
+|  |  |  |  |__Ouro
+|  |  |  |  |__Prata
+|  |  |  |  |__Cobre
+|  |  |  |  |__Gás natural
+|  |  |  |  |__Minério de ferro
+|  |  |  |  |__Lítio
+|  |  |  |  |__Soja
+|  |  |  |  |__Milho
+|  |  |  |  |__Trigo
 |  |  |__calculators.py
 |  |  |  |__Receita Mensal Líquida
 |  |  |  |__Despesa Mensal Média
