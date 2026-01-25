@@ -167,6 +167,33 @@ financial-terminal/
 |  |  | 
 |  |  |__portfolio.py
 |  |  |  |  |__Contrate um especialista
+|  |  |__valuation.py
+|  |  |  |  |__Ticker + Executar Análise
+|  |  |  |  |  |__Cotação
+|  |  |  |  |  |__P/L
+|  |  |  |  |  |__P/VP
+|  |  |  |  |  |__Dividend Yield
+|  |  |  |  |  |__ROE
+|  |  |  |  |  |__ROIC
+|  |  |  |  |  |__Margem líquida
+|  |  |  |  |  |__Margem Ebit
+|  |  |  |  |__Estimativas de valor justo
+|  |  |  |  |  |__Preço Justo (Graham)
+|  |  |  |  |  |__Preço Teto (Bazim)
+|  |  |  |  |__Detalhes do Balanço Patrimonial
+|  |  |  |  |  |__Patrimônio Líquido
+|  |  |  |  |  |__Ativo Total
+|  |  |  |  |  |__Dívida Bruta
+|  |  |  |  |  |__Dívida Líquida
+|  |  |  |  |  |__Valor de Mercado
+|  |  |  |  |  |__Valor da Firma (EV)
+|  |  |  |  |__Desempenho histórico
+|  |  |  |  |  |__2026
+|  |  |  |  |  |__2025
+|  |  |  |  |  |__2024
+|  |  |  |  |  |__2023
+|  |  |  |  |  |__2022
+|  |  |  |  |  |__2021
 |  |  |__financial_health.py
 |  |  |__compound_interest.py
 |  |  |__stocks.py
