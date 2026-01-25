@@ -103,7 +103,7 @@ def render_education_module():
         st.link_button("🌐 OpenLearn (Cursos Gratuitos Internacionais)", "https://www.open.edu/openlearn/free-courses/full-catalogue", use_container_width=True)
 
     st.markdown("---")
-    st.info("💡 **Dica do Especialista:** O conhecimento é o único ativo que não sofre marcação a mercado. Recomendo os cursos da B3 e do Banco Central para fundamentação sólida.")
+    st.info("💡 **Dica do Especialista:** O conhecimento é o único ativo que não sofre marcação a mercado.")
 
     # --- FOOTER ---
     st.markdown("---")
