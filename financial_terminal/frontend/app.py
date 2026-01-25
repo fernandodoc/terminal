@@ -51,7 +51,7 @@ def main():
         "📰 Portais": "news",
         "🏛️ Bolsa de Valores": "stock_exchange",
         "🌎 Macro": "macro",
-        "🧮 Calculadora Patrimonial": "calculators",
+        "🧮 Simulador de Liberdade": "calculators",
         "🏛️ Calculadora Cidadão": "calc_cidadao",
         "💼 Portfólio": "portfolio",
         "🔍 Valuation": "valuation",
@@ -138,4 +138,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
