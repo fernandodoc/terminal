@@ -31,6 +31,7 @@ from callbacks.portfolio import render_portfolio_vision
 from callbacks.tesouro_direto import render_tesouro_direto
 from callbacks.valuation import render_valuation_analysis
 from callbacks.previdencia import render_previdencia
+from callbacks.educacao import render_education_module
 
 # Configuração Global
 st.set_page_config(
@@ -64,7 +65,8 @@ def main():
         "💰 Dividendos": "dividends",
         "🏦 Títulos Públicos": "tesouro_direto",
         "🛡️ Previdência": "previdencia",
-        "🧪 Backtesting": "backtesting",        
+        "🧪 Backtesting": "backtesting",
+        "🎓 Educação Financeira": "educacao"
     }
 
     if 'page' not in st.session_state:
@@ -129,6 +131,8 @@ def main():
     elif current_page == "backtesting":
         st.subheader("Laboratório de Estratégias (Backtest)")
         render_backtesting_analysis()
+    elif current_page == "educacao":
+        render_education_module()
 
 
     st.sidebar.markdown("---")
@@ -138,6 +142,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
