@@ -259,5 +259,45 @@ financial-terminal/
 |  |  |  |  |  |  |  |  |__Payout
 |  |
 |  |  |__funds.py
+|  |  |  |__Central de análise
+|  |  |  |  |__CNPJ
+|  |  |  |  |__Patrimônio Total
+|  |  |  |  |__Patrimônio Líquido
+|  |  |  |  |__Início do fundo
+|  |  |  |  |__Categoria CVM
+|  |  |  |  |__Tipo de investidor
+|  |  |  |  |__Categoria Anbima
+|  |  |  |  |__Previdência (sim/não)
+|  |  |  |  |__Tributação
+|  |  |  |  |__Rentabilidade (12m, 24m, 36m, 48m, 60m)
+|  |  |  |  |__Volatilidade (12m, 24m, 36m, 48m, 60m)
+|  |  |  |  |__Índice Sharpe (12m)
+|  |  |  |  |__Consistência
+|  |  |  |  |  |__Nome do Fundo
+|  |  |  |  |  |__Meses Positivos
+|  |  |  |  |  |__Meses Negativos
+|  |  |  |  |  |__Maior Retorno
+|  |  |  |  |  |__Menor Retorno
+|  |  |__fiis.py
+|  |  |  |__Central de análise FIIs
+|  |  |  |  |__Ticker do FII
+|  |  |  |  |__Período
+|  |  |  |  |  |__Consultar
+|  |  |  |  |  |  |__Resultado
+|  |  |  |  |  |  |  |__Preço Atual
+|  |  |  |  |  |  |  |__Dividend Yield (L12M)
+|  |  |  |  |  |  |  |__P/VP
+|  |  |  |  |  |  |  |__Liquidez Diária
+|  |  |  |  |  |  |  |  |__Detalhes do Portfólio
+|  |  |  |  |  |  |  |  |  |__Nome
+|  |  |  |  |  |  |  |  |  |__Setor
+|  |  |  |  |  |  |  |  |  |__Valor do Último Dividendo
+|  |
+|  |  |__etfs.py
+|  |  |  |__Central de análise ETFs
+|  |  |  |  |__Ticker do FII
+|  |  |  |  |__Período
+|  |  |  |  |  |__Consultar
+|  |  |  |  |  |  |__Resultado
 |  |  |__dividends.py
 |  |  |__backtesting.py
