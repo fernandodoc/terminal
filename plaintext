@@ -104,7 +104,7 @@ financial-terminal/
 |  |  |  |  |__Futures
 |  |  |  |  |__Crypto
 |  |  |  |  |__Forex
-|  |  |
+|  |  
 |  |  |__macro.py
 |  |  |  |__Macro Brasil
 |  |  |  |  |__Selic Meta
@@ -145,6 +145,7 @@ financial-terminal/
 |  |  |  |  |__Soja
 |  |  |  |  |__Milho
 |  |  |  |  |__Trigo
+|  |
 |  |  |__calculators.py
 |  |  |  |  |__Simulador de Liberdade Financeira
 |  |  |  |  |  |__Fluxo de caixa
@@ -164,9 +165,10 @@ financial-terminal/
 |  |  |  |  |  |  |__Montante final (nominal)
 |  |  |  |  |  |  |__Erosão inflacionária/ano
 |  |  |  |  |  |  |__Evolução patrimonial: Nominal vs Real
-|  |  | 
+|  |   
 |  |  |__portfolio.py
 |  |  |  |  |__Contrate um especialista
+|  |
 |  |  |__valuation.py
 |  |  |  |  |__Ticker + Executar Análise
 |  |  |  |  |  |__Cotação
@@ -194,7 +196,37 @@ financial-terminal/
 |  |  |  |  |  |__2023
 |  |  |  |  |  |__2022
 |  |  |  |  |  |__2021
+|  |
 |  |  |__financial_health.py
+|  |  |  |__Saúde Financeira - Check up Geral
+|  |  |  |  |__Balanço patrimonial
+|  |  |  |  |  |__Patrimônio Líquido Total (R$)
+|  |  |  |  |  |__Total de Passivos/Dívidas (R$)
+|  |  |  |  |  |__Capital Total Investido (Preço de Custo)
+|  |  |  |  |__Fluxo de Caixa
+|  |  |  |  |  |__Renda Mensal Líquida (Pró-labore/Salário)
+|  |  |  |  |  |__Despesas Mensais Totais
+|  |  |  |  |  |__Renda Passiva Mensal (Dividendos/Aluguéis)
+|  |  |  |  |__Premissas de mercado
+|  |  |  |  |  |__Rentabilidade Estimada da Carteira (% a.a.)
+|  |  |  |  |  |__IPCA Esperado (% a.a.)
+|  |  |  |  |__Gerar diagnóstico
+|  |  |  |  |  |__Relatório de Indicadores
+|  |  |  |  |  |  |__Liquidez
+|  |  |  |  |  |  |  |__Reserva de Emergência (em meses)
+|  |  |  |  |  |  |  |__Liquidez corrente
+|  |  |  |  |  |  |  |__Endividamento
+|  |  |  |  |  |  |__Performance
+|  |  |  |  |  |  |  |__Capacidade de poupança
+|  |  |  |  |  |  |  |__Rentabilidade Real
+|  |  |  |  |  |  |  |__Yield on Cost
+|  |  |  |  |  |  |  |__Cobertura de Gastos
+|  |  |  |  |  |  |__Independência
+|  |  |  |  |  |  |  |__Anos de Sobrevivência
+|  |  |  |  |  |  |  |__Patrimônio líquido
+|  |  |  |  |  |  |  |__Velocidade do patrimônio
+
+
 |  |  |__compound_interest.py
 |  |  |__stocks.py
 |  |  |__funds.py
