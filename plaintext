@@ -146,18 +146,24 @@ financial-terminal/
 |  |  |  |  |__Milho
 |  |  |  |  |__Trigo
 |  |  |__calculators.py
-|  |  |  |__Receita Mensal Líquida
-|  |  |  |__Despesa Mensal Média
-|  |  |  |__Patrimônio Investido
-|  |  |  |__Capacidade de aporte
-|  |  |  |__Capacidade de Poupança
-|  |  |  |__IPCA
-|  |  |  |__SELIC
-|  |  |  |__Juro Real
-|  |  |  |__Patrimônio desejado
-|  |  |  |__Tempo necessário para alcançar o patrimônio desejado
-|  |  |  |__O quanto a inflação vai correr o patrimônio por ano
-|  |  |  |__Montante Final
+|  |  |  |  |__Simulador de Liberdade Financeira
+|  |  |  |  |  |__Fluxo de caixa
+|  |  |  |  |  |  |__Receita Mensal Líquida
+|  |  |  |  |  |  |__Despesa Mensal Média
+|  |  |  |  |  |  |__Capacidade de aporte
+|  |  |  |  |  |  |__Capacidade de Poupança
+|  |  |  |  |  |__Objetivo
+|  |  |  |  |  |  |__Patrimônio Investido
+|  |  |  |  |  |  |__Patrimônio desejado
+|  |  |  |  |  |__Juros e Inflação
+|  |  |  |  |  |  |__IPCA
+|  |  |  |  |  |  |__SELIC
+|  |  |  |  |  |  |__Juro Real
+|  |  |  |  |  |__Resultado
+|  |  |  |  |  |  |__Tempo para Objetivo
+|  |  |  |  |  |  |__Montante final (nominal)
+|  |  |  |  |  |  |__Erosão inflacionária/ano
+|  |  |  |  |  |  |__Evolução patrimonial: Nominal vs Real
 |  |  | 
 |  |  |__portfolio.py
 |  |  |__financial_health.py
