@@ -278,6 +278,7 @@ financial-terminal/
 |  |  |  |  |  |__Meses Negativos
 |  |  |  |  |  |__Maior Retorno
 |  |  |  |  |  |__Menor Retorno
+|  |
 |  |  |__fiis.py
 |  |  |  |__Central de análise FIIs
 |  |  |  |  |__Ticker do FII
@@ -300,4 +301,36 @@ financial-terminal/
 |  |  |  |  |  |__Consultar
 |  |  |  |  |  |  |__Resultado
 |  |  |__dividends.py
+|  |  |  |__Mapa de dividendos
+|  |  |  |  |__Ticker do Ativo
+|  |  |  |  |__Período
+|  |  |  |  |  |__Consultar (mapear proventos)
+|  |  |  |  |  |  |__Dividend Yield (Atual)
+|  |  |  |  |  |  |__Payout Ratio
+|  |  |  |  |  |  |__Dividendos L12M
+|  |  |  |  |  |  |  |__Evolução Anual de Proventos
+|  |  |  |  |  |  |  |  |__Histórico Detalhado (Últimos Lançamentos)
+|  |  |  |  |  |  |  |  |  |__Data
+|  |  |  |  |  |  |  |  |  |__Valor Pago (Dividendos)
+|  |  |  |  |  |  |  |  |  |__Ano
+|  |  |  |  |  |  |  |  |  |  |__Análise de Sustentabilidade
+|  |  |  |  |  |  |  |  |  |  |  |__Equilíbrio
+|  |  |  |  |  |  |  |  |  |  |  |__Desequilíbrio
+|  |  |  |  |  |  |  |  |  |  |  |__Neutro
+|  |
+|  |  |__tesourodireto.py
+|  |
+|  |  |__previdencia.py
+|  |
 |  |  |__backtesting.py
+|  |  |  |__Laboratório de Backtesting - Simulação
+|  |  |  |  |__Comparação de ativos  
+|  |  |  |  |__Janela de tempo (a.a)
+|  |  |  |  |  |__Peso de cada ativo
+|  |  |  |  |  |  |__Rodar Backtest
+|  |  |  |  |  |  |  |__Retorno Acumulado
+|  |  |  |  |  |  |  |__Volatilidade (a.a.)
+|  |  |  |  |  |  |  |__Max Drawdown (Queda Máx)
+|  |  |  |  |  |  |  |__Sharpe Ratio
+|  |  |  |  |  |  |  |  |__Performance da Estratégia vs Ibovespa
+|  |  |  |  |  |  |  |  |__Histórico de Quedas (Drawdown)
