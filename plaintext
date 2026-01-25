@@ -36,11 +36,11 @@ financial-terminal/
 |  |
 |  |  |__scheduler/
 |  |  |  |__update_market_data.py
-|
+|  |
 |__frontend
 |  |
 |  |__app.py
-|  |
+|  |  
 |  |__layout.py
 |  |
 |  |__callbacks/
