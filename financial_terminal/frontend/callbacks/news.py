@@ -41,6 +41,7 @@ def render_news_portal():
     br_col1, br_col2, br_col3, br_col4 = st.columns(4)
     
     br_news = [
+        ("OpenBB", "https://openbb.co/solutions/"),
         ("Fundamentus", "https://www.fundamentus.com.br/"),
         ("B3", "https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/empresas-listadas.htm"),
         ("CVM", "https://cvmweb.cvm.gov.br/SWB/Sistemas/SCW/CPublica/CiaAb/FormBuscaCiaAb.aspx?TipoConsult=c"),
@@ -116,4 +117,5 @@ def render_news_portal():
                 </div>
 
             """, unsafe_allow_html=True)
+
 
