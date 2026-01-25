@@ -345,4 +345,15 @@ financial-terminal/
 |  |  |  |  |  |  |  |  |__Performance da Estratégia vs Ibovespa
 |  |  |  |  |  |  |  |  |__Histórico de Quedas (Drawdown)
 |  |
-|  |  |__cursos_gratuitos.py
+|  |  |__educacao.py
+|  |  |  |__Cursos B3 - https://edu.b3.com.br/
+|  |  |  |__Cursos BCB - https://www.bcb.gov.br/cidadaniafinanceira/cursos
+|  |  |  |__Livros CVM - https://www.gov.br/investidor/pt-br/educacional/publicacoes-educacionais/livros-cvm/teste
+|  |  |  |__Educação Financeira na Escola - https://www.edufinanceiranaescola.gov.br/
+|  |  |  |__Portal do Investidor - https://www.gov.br/investidor/pt-br/investir
+|  |  |  |__Tipos de Investimentos - https://www.gov.br/investidor/pt-br/investir/tipos-de-investimentos
+|  |  |  |__Educação Financeira - https://www.gov.br/cvm/pt-br/assuntos/educacao
+|  |  |  |__Tesouro Direto - https://www.tesourodireto.com.br/como-investir/conteudo
+|  |  |  |__Blackrock - https://www.blackrock.com/br/educacao/portfolio-construcao
+|  |  |  |__OpenLearn - https://www.open.edu/openlearn/free-courses/full-catalogue
+|  |  |  |__Museu da Bolsa - https://mub3.org.br/
