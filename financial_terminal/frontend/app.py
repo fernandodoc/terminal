@@ -50,7 +50,7 @@ def main():
     menu_options = {
         "📰 Portais": "news",
         "🏛️ Bolsa de Valores": "stock_exchange",
-        "🌎 Painel Macro": "macro",
+        "🌎 Macro": "macro",
         "🧮 Calculadora Patrimonial": "calculators",
         "🏛️ Calculadora Cidadão": "calc_cidadao",
         "💼 Portfólio": "portfolio",
@@ -138,3 +138,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
