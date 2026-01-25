@@ -53,7 +53,7 @@ def main():
         "🌎 Macro": "macro",
         "🧮 Simulador de Liberdade": "calculators",
         "🏛️ Calculadora Cidadão": "calc_cidadao",
-        "💼 Portfólio": "portfolio",
+        "💼 Contrate um especialista": "portfolio",
         "🔍 Valuation": "valuation",
         "🏥 Saúde Financeira": "financial_health",
         "⏳ Juros Compostos": "compound_interest",
@@ -138,5 +138,6 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
