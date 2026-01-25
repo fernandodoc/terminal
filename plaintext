@@ -165,7 +165,10 @@ financial-terminal/
 |  |  |  |  |  |  |__Montante final (nominal)
 |  |  |  |  |  |  |__Erosão inflacionária/ano
 |  |  |  |  |  |  |__Evolução patrimonial: Nominal vs Real
-|  |   
+|  |
+|  |  |__calculadora_cidadao.py
+|  |  |  |__Simulador oficial para correções por índices do Banco Central do Brasil
+|  |
 |  |  |__portfolio.py
 |  |  |  |  |__Contrate um especialista
 |  |
@@ -300,6 +303,7 @@ financial-terminal/
 |  |  |  |  |__Período
 |  |  |  |  |  |__Consultar
 |  |  |  |  |  |  |__Resultado
+|  |
 |  |  |__dividends.py
 |  |  |  |__Mapa de dividendos
 |  |  |  |  |__Ticker do Ativo
