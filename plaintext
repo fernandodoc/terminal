@@ -225,9 +225,22 @@ financial-terminal/
 |  |  |  |  |  |  |  |__Anos de Sobrevivência
 |  |  |  |  |  |  |  |__Patrimônio líquido
 |  |  |  |  |  |  |  |__Velocidade do patrimônio
-
-
+|  |
 |  |  |__compound_interest.py
+|  |  |  |__Simulador de projeção patrimonial
+|  |  |  |  |__Capital
+|  |  |  |  |  |__Capital Inicial (R$)
+|  |  |  |  |  |__Aporte Mensal (R$)
+|  |  |  |  |__Taxas (% a.a.)
+|  |  |  |  |  |__Rentabilidade Estimada
+|  |  |  |  |  |__IPCA Estimado
+|  |  |  |  |__Prazo
+|  |  |  |  |  |__Tempo (anos)
+|  |  |  |__Simular Crescimento
+|  |  |  |  |  |__Montante Final (Nominal)
+|  |  |  |  |  |__Poder de Compra Real
+|  |  |  |  |  |__Total em Juros
+|  |
 |  |  |__stocks.py
 |  |  |__funds.py
 |  |  |__dividends.py
