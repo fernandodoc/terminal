@@ -303,6 +303,12 @@ financial-terminal/
 |  |  |  |  |__Período
 |  |  |  |  |  |__Consultar
 |  |  |  |  |  |  |__Resultado
+|  |  |  |  |  |__Central de cotação de ETFs e BDRs de ETFs
+|  |  |  |  |  |  |  |__Classe de Ativos
+|  |  |  |  |  |  |  |__Localização
+|  |  |  |  |  |  |  |__Segmentos
+|  |  |  |  |  |  |  |__Gestora
+|  |  |  |  |  |  |  |__Índice
 |  |
 |  |  |__dividends.py
 |  |  |  |__Mapa de dividendos
@@ -338,3 +344,5 @@ financial-terminal/
 |  |  |  |  |  |  |  |__Sharpe Ratio
 |  |  |  |  |  |  |  |  |__Performance da Estratégia vs Ibovespa
 |  |  |  |  |  |  |  |  |__Histórico de Quedas (Drawdown)
+|  |
+|  |  |__cursos_gratuitos.py
