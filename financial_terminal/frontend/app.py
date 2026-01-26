@@ -44,7 +44,7 @@ def main():
     apply_custom_style()
     
     # --- SIDEBAR NAVEGAÇÃO ---
-    st.sidebar.image("https://img.icons8.com/fluency/96/diamond.png", width=60)
+    st.sidebar.image("https://img.icons8.com/fluency/96/shield-with-stars.png", width=70)
     st.sidebar.title("em desenvolvimento")
     
     # Mapeamento atualizado com ETFs e FIIs
@@ -142,6 +142,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
