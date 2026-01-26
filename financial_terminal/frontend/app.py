@@ -136,12 +136,13 @@ def main():
 
 
     st.sidebar.markdown("---")
-    st.sidebar.caption("Sessão Ativa: Fernando | Especialista em Investimentos)")
+    st.sidebar.caption("Sessão Ativa: Fernando | Especialista em Investimentos")
     st.sidebar.caption("Versão: 1.0.0-PRO")
 
 if __name__ == "__main__":
 
     main()
+
 
 
 
