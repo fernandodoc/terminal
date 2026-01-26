@@ -49,7 +49,7 @@ def render_portfolio_vision():
     with col2:
         st.markdown("### ⚖️ O Papel do Especialista")
         st.info("""
-        O mercado financeiro é complexo e ruidoso. Um profissional certificado (**C-PRO, ANCORD**) atua como um filtro, removendo o viés emocional e aplicando modelos matemáticos para buscar a fronteira eficiente de risco e retorno.
+        O mercado financeiro é complexo e ruidoso. Um profissional certificado atua como um filtro, removendo o viés emocional e aplicando modelos matemáticos para buscar a fronteira eficiente de risco e retorno.
         
         **A tecnologia fornece os dados, mas o estrategista fornece a direção.**
         """)
@@ -59,7 +59,7 @@ def render_portfolio_vision():
     # --- FORMULÁRIO DE CONTATO (CTA) ---
     st.markdown("<div class='contact-card'>", unsafe_allow_html=True)
     st.subheader("🚀 Solicitar Diagnóstico de Portfólio")
-    st.write("Agende uma consultoria técnica para estruturar sua carteira de forma profissional.")
+    st.write("Agende uma reunião para estruturar sua carteira de forma técnica e profissional.")
 
     with st.form("contact_professional"):
         c1, c2 = st.columns(2)
@@ -85,4 +85,5 @@ def render_portfolio_vision():
             else:
                 st.error("Por favor, preencha os campos essenciais para o contato.")
     
+
     st.markdown("</div>", unsafe_allow_html=True)
