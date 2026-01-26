@@ -144,6 +144,19 @@ if __name__ == "__main__":
 
     main()
 
+    # No final do código da sidebar, após o menu:
+    st.sidebar.markdown("---")
+    with st.sidebar.expander("ℹ️ Sobre o Projeto"):
+        st.write("""
+            Este terminal é uma iniciativa de **Educação Financeira**. 
+            Oferecemos ferramentas gratuitas para democratizar o acesso 
+            a dados de mercado de alta qualidade.
+        """)
+    st.caption("Desenvolvido por Fernando - Especialista de Investimentos")
+
+    
+
+
 
 
 
