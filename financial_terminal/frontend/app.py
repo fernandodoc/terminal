@@ -45,8 +45,8 @@ def main():
     
     # --- SIDEBAR NAVEGAÇÃO ---
     st.sidebar.markdown("<h1 style='text-align: center;'>🛡️</h1>", unsafe_allow_html=True)
-    st.sidebar.markdown("<h3 style='text-align: center; color: #f3d007;'>ELITE TERMINAL</h3>", unsafe_allow_html=True)
-    """st.sidebar.title("em desenvolvimento")"""
+    st.sidebar.markdown("<h3 style='text-align: center; color: #f3d007;'>ELITE TERMINAL FINANCE</h3>", unsafe_allow_html=True)
+    st.sidebar.title("em desenvolvimento")
     
     # Mapeamento atualizado com ETFs e FIIs
     menu_options = {
@@ -143,6 +143,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
