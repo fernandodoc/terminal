@@ -64,7 +64,7 @@ def render_portfolio_vision():
     with st.form("contact_professional"):
         c1, c2 = st.columns(2)
         nome = c1.text_input("Nome Completo")
-        email = c2.text_input("E-mail Estratégico")
+        email = c2.text_input("E-mail")
         
         c3, c4 = st.columns(2)
         telefone = c3.text_input("WhatsApp para Contato")
@@ -87,3 +87,4 @@ def render_portfolio_vision():
     
 
     st.markdown("</div>", unsafe_allow_html=True)
+
