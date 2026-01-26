@@ -46,8 +46,7 @@ def main():
     # --- SIDEBAR NAVEGAÇÃO ---
     st.sidebar.markdown("<h1 style='text-align: center;'>🛡️</h1>", unsafe_allow_html=True)
     st.sidebar.markdown("<h3 style='text-align: center; color: #f3d007;'>ELITE TERMINAL FINANCE</h3>", unsafe_allow_html=True)
-    st.sidebar.title("em desenvolvimento")
-    
+        
     # Mapeamento atualizado com ETFs e FIIs
     menu_options = {
         "📰 Portais": "news",
@@ -148,13 +147,45 @@ if __name__ == "__main__":
     st.sidebar.markdown("---")
     with st.sidebar.expander("ℹ️ Sobre o Projeto"):
         st.write("""
-            Este terminal é uma iniciativa de **Educação Financeira**. 
-            Oferecemos ferramentas gratuitas para democratizar o acesso 
+            Este terminal é uma iniciativa de **Educação Financeira** 
+            e o seu objetivo é oferecer ferramentas gratuitas para democratizar o acesso 
             a dados de mercado de alta qualidade.
         """)
     st.caption("Desenvolvido por Fernando - Especialista de Investimentos")
+    st.caption("Desenvolvido por Fernando - Especialista de Investimentos")
 
+    st.info("""
+    **Propósito Educacional:** Este projeto foi desenvolvido para fornecer ferramentas 
+    técnicas gratuitas, visando elevar o nível da educação financeira e 
+    autonomia dos investidores brasileiros.
+    """)
+
+    # --- RODAPÉ DA SIDEBAR: MANIFESTO ---
+    st.sidebar.markdown("---")
+
+    # Usando um container discreto para o chamado de cooperação
+    with st.sidebar.container():
+        st.caption("🚀 **MANIFESTO OPEN-SOURCE**")
+        st.markdown("""
+            <div style='font-size: 0.85rem; color: #94a3b8; line-height: 1.4; margin-bottom: 20px;'>
+                Em busca de pessoas com propósito e coragem para transformar este 
+                projeto no maior site de inteligência financeira (open e sempre gratuito) do Brasil.
+            </div>
+        """, unsafe_allow_html=True)
+        
+    # O botão agora terá 20px de distância do texto acima
+    st.sidebar.link_button(
+        label="🤝 Quero Participar", 
+        url="https://www.linkedin.com/in/fernandodoc/",
+        use_container_width=True
+    )
+
+    # Para afastar o botão do seu nome/certificações abaixo:
+    st.sidebar.markdown("<div style='margin-top: 15px;'></div>", unsafe_allow_html=True)
+    st.sidebar.caption("Idealizado por Fernando | Profissional com certificações ANBIMA (C-PRO I • C-PRO R) e ANCORD")
     
+    
+
 
 
 
