@@ -88,6 +88,7 @@ def render_education_module():
     with col_links1:
         st.markdown("#### 🏛️ Institucionais e Reguladores")
         st.link_button("🎓 Cursos B3", "https://edu.b3.com.br/", use_container_width=True)
+        st.link_button("💡 Cursos ANBIMA", "https://cursos.anbima.com.br/pagina-inicial?_ga=2.103703616.1724472964.1769622556-1595180665.1743041812", use_container_width=True)
         st.link_button("🏦 Cursos Banco Central", "https://www.bcb.gov.br/cidadaniafinanceira/cursos", use_container_width=True)
         st.link_button("📚 Livros Oficiais CVM", "https://www.gov.br/investidor/pt-br/educacional/publicacoes-educacionais/livros-cvm/teste", use_container_width=True)
         st.link_button("🛡️ Portal do Investidor (Gov)", "https://www.gov.br/investidor/pt-br/investir", use_container_width=True)
