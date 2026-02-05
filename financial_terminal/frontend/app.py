@@ -50,7 +50,7 @@ def main():
         
     # Mapeamento atualizado com ETFs e FIIs
     menu_options = {
-        "📰 Portais": "news",
+        "📰 Inteligência de Mercado": "news",
         "✉️ Carta do Gestor": "carta",
         "🏛️ Bolsa de Valores": "stock_exchange",
         "🌎 Macro": "macro",
@@ -187,6 +187,7 @@ if __name__ == "__main__":
     st.sidebar.caption("Idealizado por Fernando | Profissional com certificações ANBIMA (C-PRO I • C-PRO R) e ANCORD")
     
     
+
 
 
 
