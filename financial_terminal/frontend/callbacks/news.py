@@ -73,7 +73,8 @@ def render_news_portal():
             ("Valor Data", "https://valor.globo.com/valor-data/"),
             ("USA Census", "https://www.census.gov/econ/qfr/index.html"),
             ("Dividend Kings", "https://www.dividend.com/dividend-kings/"),
-            ("Trading Economics", "https://tradingeconomics.com/api/")   
+            ("Trading Economics", "https://tradingeconomics.com/api/"),
+            ("Finviz", "https://finviz.com/")
         ]
         
         for name, url in fund_data:
@@ -127,6 +128,7 @@ def render_news_portal():
 
     st.markdown("---")
     st.caption("🔒 **Nota de Segurança:** Todos os links abrem em abas externas para garantir a integridade da sua sessão atual.")
+
 
 
 
