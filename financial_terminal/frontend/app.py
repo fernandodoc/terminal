@@ -53,7 +53,7 @@ def main():
         "📰 Inteligência de Mercado": "news",
         "✉️ Carta do Gestor": "carta",
         "🏛️ Bolsa de Valores": "stock_exchange",
-        "🌎 Macro": "macro",
+        "🌎 Painel Macro": "macro",
         "🧮 Simulador de Liberdade": "calculators",
         "🏛️ Calculadora Cidadão": "calc_cidadao",
         "💼 Contrate um especialista": "portfolio",
@@ -187,6 +187,7 @@ if __name__ == "__main__":
     st.sidebar.caption("Idealizado por Fernando | Profissional com certificações ANBIMA (C-PRO I • C-PRO R) e ANCORD")
     
     
+
 
 
 
