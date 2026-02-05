@@ -62,6 +62,7 @@ def render_news_portal():
             ("OpenBB", "https://openbb.co/solutions/"),
             ("StatusInvest", "https://statusinvest.com.br/"),
             ("Fundamentus", "https://www.fundamentus.com.br/"),
+            ("Brasil Indicadores", "https://brasilindicadores.com.br/"),
             ("Instituto Assaf", "https://www.institutoassaf.com.br/"),
             ("ADVFN", "https://br.advfn.com/"),
             ("Investidor10", "https://investidor10.com.br/"),
@@ -72,8 +73,9 @@ def render_news_portal():
             ("Valor Data", "https://valor.globo.com/valor-data/"),
             ("USA Census", "https://www.census.gov/econ/qfr/index.html"),
             ("Dividend Kings", "https://www.dividend.com/dividend-kings/"),
-            ("Trading Economics", "https://tradingeconomics.com/api/")
+            ("Trading Economics", "https://tradingeconomics.com/api/")   
         ]
+        
         for name, url in fund_data:
             st.markdown(f"""
                 <a href="{url}" target="_blank" class="news-card">
@@ -125,6 +127,7 @@ def render_news_portal():
 
     st.markdown("---")
     st.caption("🔒 **Nota de Segurança:** Todos os links abrem em abas externas para garantir a integridade da sua sessão atual.")
+
 
 
 
