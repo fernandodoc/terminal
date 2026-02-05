@@ -1,7 +1,8 @@
 import streamlit as st
+from backend.api.mailer import enviar_dados_ao_especialista
 
 def render_portfolio_vision():
-    # Estilização de Luxo para a seção de Portfólio
+    # --- ESTILIZAÇÃO (CSS) ---
     st.markdown("""
         <style>
         .portfolio-header {
@@ -41,30 +42,31 @@ def render_portfolio_vision():
     with col1:
         st.markdown("### 🎯 O Tripé da Gestão Profissional")
         st.write("""
-        1. **Eficiência Fiscal:** Não se trata de quanto você ganha, mas de quanto você mantém. Estruturas que minimizam o impacto tributário são fundamentais para o crescimento composto.
-        2. **Blindagem Patrimonial:** Proteção contra riscos sistêmicos e jurisdicionais, garantindo que o capital esteja seguro para as próximas gerações.
-        3. **Transmissão de Legado:** Um planejamento sucessório inteligente evita a dilapidação do patrimônio em processos burocráticos e onerosos.
+        1. **Eficiência Fiscal:** Minimizar o impacto tributário para acelerar o crescimento composto.
+        2. **Blindagem Patrimonial:** Proteção contra riscos sistêmicos e jurisdicionais.
+        3. **Transmissão de Legado:** Planejamento sucessório inteligente para evitar burocracia onerosa.
         """)
 
     with col2:
         st.markdown("### ⚖️ O Papel do Especialista")
         st.info("""
-        O mercado financeiro é complexo e ruidoso. Um profissional certificado atua como um filtro, removendo o viés emocional e aplicando modelos matemáticos para buscar a fronteira eficiente de risco e retorno.
+        Um profissional certificado atua como um filtro técnico, removendo o viés emocional e aplicando modelos matemáticos de fronteira eficiente.
         
         **A tecnologia fornece os dados, mas o estrategista fornece a direção.**
         """)
 
     st.markdown("---")
 
-    # --- FORMULÁRIO DE CONTATO (CTA) ---
+    # --- FORMULÁRIO DE CONTATO (DENTRO DA DIV ESTILIZADA) ---
     st.markdown("<div class='contact-card'>", unsafe_allow_html=True)
     st.subheader("🚀 Solicitar Diagnóstico de Portfólio")
-    st.write("Agende uma reunião para estruturar sua carteira de forma técnica e profissional.")
+    st.write("Agende uma consultoria técnica para estruturar sua carteira de forma profissional.")
 
-    with st.form("contact_professional"):
+    # Início do Formulário
+    with st.form("contact_professional", clear_on_submit=False):
         c1, c2 = st.columns(2)
         nome = c1.text_input("Nome Completo")
-        email = c2.text_input("E-mail")
+        email = c2.text_input("E-mail Estratégico")
         
         c3, c4 = st.columns(2)
         telefone = c3.text_input("WhatsApp para Contato")
@@ -78,13 +80,27 @@ def render_portfolio_vision():
         
         submit_contact = st.form_submit_button("Enviar Dados ao Especialista")
         
+        # A LÓGICA DE ENVIO PRECISA ESTAR AQUI (DENTRO DO 'WITH')
         if submit_contact:
             if nome and email and telefone:
-                st.success(f"Obrigado, {nome}! Seus dados foram enviados com prioridade. O especialista entrará em contato em breve.")
-                # Aqui você poderia integrar com uma API de e-mail ou Telegram
+                dados_lead = {
+                    "Nome": nome,
+                    "Email": email,
+                    "WhatsApp": telefone,
+                    "Patrimonio": faixa_patrimonial,
+                    "Mensagem": mensagem,
+                    "_subject": f"🚀 Novo Lead de Elite: {nome}"
+                }
+                
+                with st.spinner("Conectando ao especialista..."):
+                    sucesso = enviar_dados_ao_especialista(dados_lead)
+                
+                if sucesso:
+                    st.success(f"Excelente, {nome}! Seus dados foram enviados. Entrarei em contato em breve.")
+                    st.balloons()
+                else:
+                    st.error("Ocorreu um erro ao processar o envio. Verifique o console do terminal para detalhes ou sua conta Formspree.")
             else:
-                st.error("Por favor, preencha os campos essenciais para o contato.")
-    
+                st.error("Por favor, preencha nome, e-mail e telefone.")
 
     st.markdown("</div>", unsafe_allow_html=True)
-
