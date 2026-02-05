@@ -1,6 +1,7 @@
 import streamlit as st
 from backend.api.funds import get_fund_data
 
+@st.cache_data(ttl=3600)
 def render_funds_analysis():
     st.markdown("### 🏢 Central de Análise de Fundos (B3)")
     st.info("Para fundos imobiliários e ETFs, utilize o Ticker oficial (ex: HGLG11, IVVB11).")
@@ -29,4 +30,5 @@ def render_funds_analysis():
             c4.metric("Perf. 12m", f"{data['Performance_12m']:.2f}%")
             
             with st.expander("📖 Tese de Investimento"):
+
                 st.write(data['Resumo'])
