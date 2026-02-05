@@ -71,7 +71,8 @@ def render_news_portal():
             ("Economatica", "https://www.economatica.com/"),
             ("Valor Data", "https://valor.globo.com/valor-data/"),
             ("USA Census", "https://www.census.gov/econ/qfr/index.html"),
-            ("Dividend Kings", "https://www.dividend.com/dividend-kings/")
+            ("Dividend Kings", "https://www.dividend.com/dividend-kings/"),
+            ("Trading Economics", "https://tradingeconomics.com/api/")
         ]
         for name, url in fund_data:
             st.markdown(f"""
@@ -124,6 +125,7 @@ def render_news_portal():
 
     st.markdown("---")
     st.caption("🔒 **Nota de Segurança:** Todos os links abrem em abas externas para garantir a integridade da sua sessão atual.")
+
 
 
 
