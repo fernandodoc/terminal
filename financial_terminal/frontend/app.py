@@ -185,8 +185,11 @@ if __name__ == "__main__":
     # Para afastar o botão do seu nome/certificações abaixo:
     st.sidebar.markdown("<div style='margin-top: 15px;'></div>", unsafe_allow_html=True)
     st.sidebar.caption("Idealizado por Fernando | Profissional com certificações ANBIMA (C-PRO I • C-PRO R) e ANCORD")
+
+    st.link_button("Github", "https://github.com/fernandodoc/terminal", use_container_width=False)
     
     
+
 
 
 
