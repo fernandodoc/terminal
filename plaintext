@@ -44,39 +44,45 @@ financial-terminal/
 |  |__layout.py
 |  |
 |  |__callbacks/
-|  |  |__news.py
-|  |  |  |__Informações e fundamentos
-|  |  |  |  |__https://www.fundamentus.com.br/
-|  |  |  |  |__https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/empresas-listadas.htm
-|  |  |  |  |__https://cvmweb.cvm.gov.br/SWB/Sistemas/SCW/CPublica/CiaAb/FormBuscaCiaAb.aspx?TipoConsult=c
-|  |  |  |  |__https://statusinvest.com.br/
-|  |  |  |  |__https://investidor10.com.br/
-|  |  |  |  |__https://br.advfn.com/
-|  |  |  |  |__https://br.investing.com/equities
-|  |  |  |  |__https://www.economatica.com/
-|  |  |  |  |__https://valor.globo.com/valor-data/
-|  |  |  |  |__https://www.investsite.com.br/
-|  |  |  |  |__"https://www.institutoassaf.com.br/
-|  |  |  |  |__https://www.census.gov/econ/qfr/index.html
+|  |  |__news.py #Inteligência de Mercado
+|  |  |  |__Fundamentos
+|  |  |  |  |__OpenBB, "https://openbb.co/solutions/"),
+|  |  |  |  |__StatusInvest, "https://statusinvest.com.br/"),
+|  |  |  |  |__Fundamentus, "https://www.fundamentus.com.br/"),
+|  |  |  |  |__Instituto Assaf, "https://www.institutoassaf.com.br/"),
+|  |  |  |  |__Mais Retorno, "https://maisretorno.com/"),
+|  |  |  |  |__Brasil Indicadores, "https://brasilindicadores.com.br/"),
+|  |  |  |  |__ADVFN, "https://br.advfn.com/"),
+|  |  |  |  |__Clube FII, "https://www.clubefii.com.br/"),
+|  |  |  |  |__Investidor10, "https://investidor10.com.br/"),
+|  |  |  |  |__CVM, "https://cvmweb.cvm.gov.br/"),
+|  |  |  |  |__B3 Empresas, "https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/empresas-listadas.htm"),
+|  |  |  |  |__World Bank, "https://data360.worldbank.org/en/economy/BRA"),
+|  |  |  |  |__Economatica, "https://www.economatica.com/"),
+|  |  |  |  |__Valor Data, "https://valor.globo.com/valor-data/"),
+|  |  |  |  |__USA Census, "https://www.census.gov/econ/qfr/index.html"),
+|  |  |  |  |__Dividend Kings, "https://www.dividend.com/dividend-kings/"),
+|  |  |  |  |__Trading Economics, "https://tradingeconomics.com/api/"),
+|  |  |  |  |__Finviz, "https://finviz.com/")
 |  |  |  |__Brasil
-|  |  |  |  |__https://www.infomoney.com.br/
-|  |  |  |  |__https://valor.globo.com/
-|  |  |  |  |__https://www.moneytimes.com.br/
-|  |  |  |  |__https://investnews.com.br/
-|  |  |  |  |__https://br.investing.com/
-|  |  |  |  |__https://www.bloomberglinea.com.br
-|  |  |  |  |__https://www.cnnbrasil.com.br/money/
+|  |  |  |  |__Valor Econômico, "https://valor.globo.com/"),
+|  |  |  |  |__Bloomberg Línea, "https://www.bloomberglinea.com.br"),
+|  |  |  |  |__InfoMoney, "https://www.infomoney.com.br/"),
+|  |  |  |  |__Money Times, "https://www.moneytimes.com.br/"),
+|  |  |  |  |__CNN Money, "https://www.cnnbrasil.com.br/money/"),
+|  |  |  |  |__InvestNews, "https://investnews.com.br/"),
+|  |  |  |  |__Investing BR, "https://br.investing.com/")
 |  |  |  |__Global
-|  |  |  |  |__https://www.ft.com/
-|  |  |  |  |__https://www.bloomberg.com/markets
-|  |  |  |  |__https://www.economist.com/
-|  |  |  |  |__https://www.marketwatch.com/
-|  |  |  |  |__https://www.investopedia.com/
-|  |  |  |  |__https://www.reuters.com/
-|  |  |  |  |__https://www.nytimes.com/
-|  |  |  |  |__https://www.barrons.com/
-|  |  |  |  |__https://www.investors.com/
+|  |  |  |  |__Financial Times, "https://www.ft.com/"),
+|  |  |  |  |__Bloomberg, "https://www.bloomberg.com/markets"),
+|  |  |  |  |__Reuters, "https://www.reuters.com/"),
+|  |  |  |  |__MarketWatch, "https://www.marketwatch.com/"),
+|  |  |  |  |__The Economist, "https://www.economist.com/"),
+|  |  |  |  |__Barron's, "https://www.barrons.com/"),
+|  |  |  |  |__Investopedia, "https://www.investopedia.com/"),
+|  |  |  |  |__NY Times Finance, "https://www.nytimes.com/section/business")
 |  |  |
+|  |  |__letter.py # Carta do Gestor
 |  |  |__stock_exchange.py
 |  |  |  |__Brasil - B3
 |  |  |  |  |__Ibovespa
