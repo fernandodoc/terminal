@@ -63,6 +63,7 @@ def render_news_portal():
             ("StatusInvest", "https://statusinvest.com.br/"),
             ("Fundamentus", "https://www.fundamentus.com.br/"),
             ("Instituto Assaf", "https://www.institutoassaf.com.br/"),
+            ("ADVFN", "https://br.advfn.com/"),
             ("Investidor10", "https://investidor10.com.br/"),
             ("CVM", "https://cvmweb.cvm.gov.br/"),
             ("B3 Empresas", "https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/empresas-listadas.htm"),
@@ -122,4 +123,5 @@ def render_news_portal():
 
     st.markdown("---")
     st.caption("🔒 **Nota de Segurança:** Todos os links abrem em abas externas para garantir a integridade da sua sessão atual.")
+
 
