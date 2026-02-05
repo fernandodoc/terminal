@@ -50,9 +50,9 @@ def render_news_portal():
 
     # --- ORGANIZAÇÃO EM TABS (Melhor UX para não poluir a tela) ---
     tab_fund, tab_br, tab_global = st.tabs([
-        "🔍 Fundamentos & Dados", 
-        "🇧🇷 Terminais Brasil", 
-        "🌎 Terminais Globais"
+        "🔍 Fundamentos", 
+        "🇧🇷 Brasil", 
+        "🌎 Globais"
     ])
 
     # --- TAB 1: FUNDAMENTOS ---
@@ -129,6 +129,7 @@ def render_news_portal():
 
     st.markdown("---")
     st.caption("🔒 **Nota de Segurança:** Todos os links abrem em abas externas para garantir a integridade da sua sessão atual.")
+
 
 
 
