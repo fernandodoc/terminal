@@ -64,6 +64,7 @@ def render_news_portal():
             ("Fundamentus", "https://www.fundamentus.com.br/"),
             ("Brasil Indicadores", "https://brasilindicadores.com.br/"),
             ("Instituto Assaf", "https://www.institutoassaf.com.br/"),
+            ("Clube FII", "https://www.clubefii.com.br/"),
             ("ADVFN", "https://br.advfn.com/"),
             ("Investidor10", "https://investidor10.com.br/"),
             ("CVM", "https://cvmweb.cvm.gov.br/"),
@@ -128,6 +129,7 @@ def render_news_portal():
 
     st.markdown("---")
     st.caption("🔒 **Nota de Segurança:** Todos os links abrem em abas externas para garantir a integridade da sua sessão atual.")
+
 
 
 
