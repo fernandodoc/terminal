@@ -70,7 +70,8 @@ def render_news_portal():
             ("World Bank", "https://data360.worldbank.org/en/economy/BRA"),
             ("Economatica", "https://www.economatica.com/"),
             ("Valor Data", "https://valor.globo.com/valor-data/"),
-            ("USA Census", "https://www.census.gov/econ/qfr/index.html")
+            ("USA Census", "https://www.census.gov/econ/qfr/index.html"),
+            ("Dividend Kings", "https://www.dividend.com/dividend-kings/")
         ]
         for name, url in fund_data:
             st.markdown(f"""
@@ -123,5 +124,6 @@ def render_news_portal():
 
     st.markdown("---")
     st.caption("🔒 **Nota de Segurança:** Todos os links abrem em abas externas para garantir a integridade da sua sessão atual.")
+
 
 
