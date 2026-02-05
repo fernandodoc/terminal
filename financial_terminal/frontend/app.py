@@ -32,6 +32,7 @@ from callbacks.tesouro_direto import render_tesouro_direto
 from callbacks.valuation import render_valuation_analysis
 from callbacks.previdencia import render_previdencia
 from callbacks.educacao import render_education_module
+from frontend.callbacks.letter import render_manager_letter
 
 # Configuração Global
 st.set_page_config(
@@ -50,6 +51,7 @@ def main():
     # Mapeamento atualizado com ETFs e FIIs
     menu_options = {
         "📰 Portais": "news",
+        "✉️ Carta do Gestor": "carta",
         "🏛️ Bolsa de Valores": "stock_exchange",
         "🌎 Macro": "macro",
         "🧮 Simulador de Liberdade": "calculators",
@@ -86,6 +88,8 @@ def main():
         st.subheader("Informação estruturada. Insumo para sua decisão.")
         st.caption("Menos ruído e mais contexto para decisões melhores.")
         render_news_portal()# Os cards aparecem logo abaixo do título
+    elif current_page == "carta":
+        render_manager_letter()
     elif current_page == "stock_exchange":
         st.subheader("Bolsa de valores")
         render_stock_exchange()
@@ -184,6 +188,7 @@ if __name__ == "__main__":
     st.sidebar.caption("Idealizado por Fernando | Profissional com certificações ANBIMA (C-PRO I • C-PRO R) e ANCORD")
     
     
+
 
 
 
