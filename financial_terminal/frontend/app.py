@@ -155,8 +155,7 @@ if __name__ == "__main__":
             e o seu objetivo é oferecer ferramentas gratuitas para democratizar o acesso 
             a dados de mercado de alta qualidade.
         """)
-    st.caption("Desenvolvido por Fernando - Especialista de Investimentos")
-    
+        
     st.info("""
     **Propósito Educacional:** Este projeto foi desenvolvido para fornecer ferramentas 
     gratuitas, visando elevar o nível da educação financeira e 
@@ -188,6 +187,7 @@ if __name__ == "__main__":
     st.sidebar.caption("Idealizado por Fernando | Profissional com certificações ANBIMA (C-PRO I • C-PRO R) e ANCORD")
     
     
+
 
 
 
