@@ -80,27 +80,29 @@ def render_portfolio_vision():
         
         submit_contact = st.form_submit_button("Enviar Dados ao Especialista")
         
-        # A LÓGICA DE ENVIO PRECISA ESTAR AQUI (DENTRO DO 'WITH')
         if submit_contact:
+            # Esse print VAI aparecer no seu log do Manage App se o botão funcionar
+            print("🚀 BOTÃO PRESSIONADO: Iniciando processo de envio...") 
+            
             if nome and email and telefone:
                 dados_lead = {
                     "Nome": nome,
                     "Email": email,
                     "WhatsApp": telefone,
                     "Patrimonio": faixa_patrimonial,
-                    "Mensagem": mensagem,
-                    "_subject": f"🚀 Novo Lead de Elite: {nome}"
+                    "Mensagem": mensagem
                 }
                 
                 with st.spinner("Conectando ao especialista..."):
                     sucesso = enviar_dados_ao_especialista(dados_lead)
+                    # Outro print para rastrear o resultado
+                    print(f"📊 RESULTADO DO ENVIO: {sucesso}")
                 
                 if sucesso:
-                    st.success(f"Excelente, {nome}! Seus dados foram enviados. Entrarei em contato em breve.")
+                    st.success(f"Excelente, {nome}! Seus dados foram enviados.")
                     st.balloons()
                 else:
-                    st.error("Ocorreu um erro ao processar o envio. Verifique o console do terminal para detalhes ou sua conta Formspree.")
+                    st.error("Erro no envio. Verifique os logs do sistema.")
             else:
-                st.error("Por favor, preencha nome, e-mail e telefone.")
+                st.error("Campos obrigatórios ausentes.")
 
-    st.markdown("</div>", unsafe_allow_html=True)
