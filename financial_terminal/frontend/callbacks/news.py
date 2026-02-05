@@ -1,121 +1,123 @@
 import streamlit as st
 
 def render_news_portal():
-    """Renderiza os cards de acesso aos jornais e portais financeiros."""
+    """Renderiza o Portal de Inteligência com UI/UX de alta performance."""
     
-    # Estilização local para os cards de notícias
+    # CSS Avançado: Estilo Profissional com Glassmorphism leve
     st.markdown("""
         <style>
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 12px;
+            padding: 10px 0px;
+        }
         .news-card {
-            background-color: #161b22;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #30363d;
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            padding: 18px;
+            border-radius: 8px;
+            border: 1px solid #334155;
             text-align: center;
-            height: 120px;
+            transition: all 0.3s ease;
             display: flex;
-            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            transition: 0.3s;
-            margin-bottom: 15px;
+            min-height: 80px;
+            text-decoration: none !important;
         }
         .news-card:hover {
-            border-color: #58a6ff;
-            background-color: #1f2937;
+            border-color: #fbbf24; /* Dourado para alinhar com seu branding de elite */
+            transform: translateY(-3px);
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+            background: #1e293b;
         }
         .news-link {
-            text-decoration: none;
-            color: #58a6ff;
-            font-weight: bold;
-            font-size: 18px;
+            color: #f1f5f9 !important;
+            font-weight: 500;
+            font-size: 15px;
+            text-decoration: none !important;
+            font-family: 'Inter', sans-serif;
         }
         </style>
     """, unsafe_allow_html=True)
 
-    st.subheader("📰 Sala de Análise")
-    st.caption("O ponto de convergência entre informação, análise e capital.")
-    
-    # --- SEÇÃO NACIONAL ---
-    # --- SEÇÃO FUNDAMENTOS ---
-    st.markdown("#### Informações e fundamentos")
-    br_col1, br_col2, br_col3, br_col4 = st.columns(4)
-    
-    br_news = [
-        ("OpenBB", "https://openbb.co/solutions/"),
-        ("Fundamentus", "https://www.fundamentus.com.br/"),
-        ("B3", "https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/empresas-listadas.htm"),
-        ("CVM", "https://cvmweb.cvm.gov.br/SWB/Sistemas/SCW/CPublica/CiaAb/FormBuscaCiaAb.aspx?TipoConsult=c"),
-        ("Data World Bank", "https://data360.worldbank.org/en/economy/BRA"),
-        ("StatusInvest", "https://statusinvest.com.br/"),
-        ("Investidor10", "https://investidor10.com.br/"),
-        ("ADVFN", "https://br.advfn.com/"),
-        ("Investing BR", "https://br.investing.com/equities"),
-        ("Economatica", "https://www.economatica.com/"),
-        ("Valor Data", "https://valor.globo.com/valor-data/"),
-        ("InvestSite", "https://www.investsite.com.br/"),
-        ("Instituto Assaf", "https://www.institutoassaf.com.br/"),
-        ("USA Census Bureau", "https://www.census.gov/econ/qfr/index.html")
-    ]
+    st.title("📰 Sala de Inteligência")
+    st.markdown("""
+        <p style='color: #94a3b8; font-size: 1.1rem; margin-top: -15px;'>
+            Acesso direto às principais fontes de dados e terminais de notícias globais.
+        </p>
+    """, unsafe_allow_html=True)
 
-    cols = [br_col1, br_col2, br_col3, br_col4]
-    for i, (name, url) in enumerate(br_news):
-        with cols[i % 4]:
+    # --- ORGANIZAÇÃO EM TABS (Melhor UX para não poluir a tela) ---
+    tab_fund, tab_br, tab_global = st.tabs([
+        "🔍 Fundamentos & Dados", 
+        "🇧🇷 Terminais Brasil", 
+        "🌎 Terminais Globais"
+    ])
+
+    # --- TAB 1: FUNDAMENTOS ---
+    with tab_fund:
+        st.markdown("<div class='news-grid'>", unsafe_allow_html=True)
+        fund_data = [
+            ("OpenBB", "https://openbb.co/solutions/"),
+            ("StatusInvest", "https://statusinvest.com.br/"),
+            ("Fundamentus", "https://www.fundamentus.com.br/"),
+            ("Investidor10", "https://investidor10.com.br/"),
+            ("CVM", "https://cvmweb.cvm.gov.br/"),
+            ("B3 Empresas", "https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/empresas-listadas.htm"),
+            ("World Bank", "https://data360.worldbank.org/en/economy/BRA"),
+            ("Economatica", "https://www.economatica.com/"),
+            ("Valor Data", "https://valor.globo.com/valor-data/"),
+            ("USA Census", "https://www.census.gov/econ/qfr/index.html")
+        ]
+        for name, url in fund_data:
             st.markdown(f"""
-                <div class="news-card">
-                    <a href="{url}" target="_blank" class="news-link">{name}</a>
-                </div>
+                <a href="{url}" target="_blank" class="news-card">
+                    <span class="news-link">{name}</span>
+                </a>
             """, unsafe_allow_html=True)
+        st.markdown("</div>", unsafe_allow_html=True)
+
+    # --- TAB 2: BRASIL ---
+    with tab_br:
+        st.markdown("<div class='news-grid'>", unsafe_allow_html=True)
+        br_news = [
+            ("Valor Econômico", "https://valor.globo.com/"),
+            ("Bloomberg Línea", "https://www.bloomberglinea.com.br"),
+            ("InfoMoney", "https://www.infomoney.com.br/"),
+            ("Money Times", "https://www.moneytimes.com.br/"),
+            ("CNN Money", "https://www.cnnbrasil.com.br/money/"),
+            ("InvestNews", "https://investnews.com.br/"),
+            ("Investing BR", "https://br.investing.com/")
+        ]
+        for name, url in br_news:
+            st.markdown(f"""
+                <a href="{url}" target="_blank" class="news-card">
+                    <span class="news-link">{name}</span>
+                </a>
+            """, unsafe_allow_html=True)
+        st.markdown("</div>", unsafe_allow_html=True)
+
+    # --- TAB 3: GLOBAL ---
+    with tab_global:
+        st.markdown("<div class='news-grid'>", unsafe_allow_html=True)
+        int_news = [
+            ("Financial Times", "https://www.ft.com/"),
+            ("Bloomberg", "https://www.bloomberg.com/markets"),
+            ("Reuters", "https://www.reuters.com/"),
+            ("MarketWatch", "https://www.marketwatch.com/"),
+            ("The Economist", "https://www.economist.com/"),
+            ("Barron's", "https://www.barrons.com/"),
+            ("Investopedia", "https://www.investopedia.com/"),
+            ("NY Times Finance", "https://www.nytimes.com/section/business")
+        ]
+        for name, url in int_news:
+            st.markdown(f"""
+                <a href="{url}" target="_blank" class="news-card">
+                    <span class="news-link">{name}</span>
+                </a>
+            """, unsafe_allow_html=True)
+        st.markdown("</div>", unsafe_allow_html=True)
 
     st.markdown("---")
-    # --- estruturando
-    st.markdown("#### Brasil")
-    br_col1, br_col2, br_col3, br_col4 = st.columns(4)
-    
-    br_news = [
-        ("InfoMoney", "https://www.infomoney.com.br/"),
-        ("Valor Econômico", "https://valor.globo.com/"),
-        ("Money Times", "https://www.moneytimes.com.br/"),
-        ("InvestNews", "https://investnews.com.br/"),
-        ("Investing BR", "https://br.investing.com/"),
-        ("bloomberg Línea", "https://www.bloomberglinea.com.br"),
-        ("CNN Money", "https://www.cnnbrasil.com.br/money/")
-    ]
-
-    cols = [br_col1, br_col2, br_col3, br_col4]
-    for i, (name, url) in enumerate(br_news):
-        with cols[i % 4]:
-            st.markdown(f"""
-                <div class="news-card">
-                    <a href="{url}" target="_blank" class="news-link">{name}</a>
-                </div>
-            """, unsafe_allow_html=True)
-
-    st.markdown("---")
-    # --- estruturando
-    # --- SEÇÃO INTERNACIONAL ---
-    st.markdown("#### 🌎 Global")
-    int_col1, int_col2, int_col3, int_col4 = st.columns(4)
-    
-    int_news = [
-        ("Financial Times", "https://www.ft.com/"),
-        ("Bloomberg", "https://www.bloomberg.com/markets"),
-        ("The Economist", "https://www.economist.com/"),
-        ("MarketWatch", "https://www.marketwatch.com/"),
-        ("Investopedia", "https://www.investopedia.com/"),
-        ("Reuters", "https://www.reuters.com/"),
-        ("NY Times Finance", "https://www.nytimes.com/"),
-        ("Barron's", "https://www.barrons.com/"),
-        ("Investor's Business Daily", "https://www.investors.com/")
-    ]
-
-    cols_int = [int_col1, int_col2, int_col3, int_col4]
-    for i, (name, url) in enumerate(int_news):
-        with cols_int[i % 4]:
-            st.markdown(f"""
-                <div class="news-card">
-                    <a href="{url}" target="_blank" class="news-link">{name}</a>
-                </div>
-
-            """, unsafe_allow_html=True)
-
-
+    st.caption("🔒 **Nota de Segurança:** Todos os links abrem em abas externas para garantir a integridade da sua sessão atual.")
