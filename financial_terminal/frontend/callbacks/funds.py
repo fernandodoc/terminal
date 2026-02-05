@@ -1,84 +1,80 @@
 import streamlit as st
-from backend.api.funds import get_fund_data
+from backend.api.funds import get_fund_data, get_fund_by_cnpj
 
 def render_funds_analysis():
-    # Estilização para métricas e títulos
-    st.markdown("""
-        <style>
-        [data-testid="stMetricValue"] { font-size: 1.8rem; color: #fbbf24; }
-        .fund-header {
-            background: linear-gradient(90deg, #1e293b 0%, #0f172a 100%);
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 5px solid #fbbf24;
-            margin-bottom: 20px;
-        }
-        </style>
-    """, unsafe_allow_html=True)
-
     st.markdown("### 🏢 Central de Inteligência de Fundos")
-    st.caption("Análise institucional de FIIs e ETFs listados na B3.")
+    
+    tab_listados, tab_cnpj = st.tabs(["📊 FIIs e ETFs (Ticker)", "🏦 Fundos de Investimento (CNPJ)"])
 
-    # Sidebar ou Coluna estreita para busca (Melhor UX que formulário largo)
-    with st.container():
-        col_search, col_empty = st.columns([1, 2])
-        with col_search:
-            ticker = st.text_input("Ticker do Ativo", value="HGLG11", help="Ex: HGLG11, IVVB11, XPLG11").upper().strip()
-            # Botão fora do form para resposta mais rápida ao clique
-            btn_analisar = st.button("🔍 Analisar Ativo", use_container_width=True)
+    with tab_listados:
+        render_listados_section()
 
-    if btn_analisar or ticker:
-        with st.spinner(f"Processando dados de {ticker}..."):
-            try:
-                data = get_fund_data(ticker)
+    with tab_cnpj:
+        st.write("Consulte dados oficiais de lâmina e performance via base da CVM.")
+        
+        with st.container():
+            col_search, _ = st.columns([1.5, 2])
+            with col_search:
+                cnpj_input = st.text_input("Digite o CNPJ do Fundo", placeholder="00.000.000/0000-00")
+                btn_cnpj = st.button("🔍 Consultar CNPJ", use_container_width=True)
+
+        if btn_cnpj and cnpj_input:
+            with st.spinner("Acessando base da CVM..."):
+                data_cnpj = get_fund_by_cnpj(cnpj_input)
                 
-                if not data or "Erro" in data:
-                    st.error(f"⚠️ {data.get('Erro', 'Erro inesperado ao buscar dados.')}")
-                    st.info("Dica: Verifique se o ticker está correto ou tente novamente em instantes.")
-                    return
+                if "Erro" in data_cnpj:
+                    st.error(data_cnpj["Erro"])
+                else:
+                    st.markdown(f"""
+                        <div style="background-color: #1e293b; padding: 20px; border-radius: 10px; border-left: 5px solid #3b82f6; margin-bottom: 20px;">
+                            <h3 style='margin:0; color:white;'>{data_cnpj['razao_social']}</h3>
+                            <p style='color: #94a3b8; margin:0;'>CNPJ: {cnpj_input} | Classe: {data_cnpj['classe']}</p>
+                        </div>
+                    """, unsafe_allow_html=True)
 
-                # Header do Fundo
+                    c1, c2, c3 = st.columns(3)
+                    c1.metric("Patrimônio Líquido", f"R$ {data_cnpj['pl_estrategia']:,.2f}")
+                    c2.metric("Cota Atual", f"R$ {data_cnpj['valor_cota']:.4f}")
+                    c3.metric("Investidores", f"{data_cnpj['num_cotistas']:,}")
+
+                    with st.expander("📝 Detalhes do Fundo"):
+                        st.write(f"**Gestor:** {data_cnpj['gestor']}")
+                        st.write(f"**Administrador:** {data_cnpj['administrador']}")
+                        st.write(f"**Taxa de Administração:** {data_cnpj['taxa_adm']}")
+
+def render_listados_section():
+    ticker = st.text_input("Ticker do Ativo", value="HGLG11", help="Ex: HGLG11, IVVB11, KNCR11").upper().strip()
+    
+    if st.button("Analisar Ticker", key="btn_ticker", use_container_width=True):
+        with st.spinner(f"Buscando dados de {ticker}..."):
+            data = get_fund_data(ticker)
+            
+            if "Erro" in data:
+                st.error(data["Erro"])
+            else:
                 st.markdown(f"""
-                    <div class="fund-header">
-                        <h2 style='margin:0; color:white;'>{ticker} | {data.get('Nome', 'Fundo Selecionado')}</h2>
-                        <span style='color:#94a3b8;'>Dados atualizados via Terminal de Elite</span>
+                    <div style="background-color: #1e293b; padding: 20px; border-radius: 10px; border-left: 5px solid #fbbf24; margin-bottom: 20px;">
+                        <h3 style='margin:0; color:white;'>{data['Nome']}</h3>
                     </div>
                 """, unsafe_allow_html=True)
 
-                # Grid de Métricas Principais
-                m1, m2, m3, m4 = st.columns(4)
+                c1, c2, c3, c4 = st.columns(4)
                 
-                # Cotação com Delta (Variação) se disponível
-                m1.metric("Cotação Atual", f"R$ {data['Cotação']:.2f}")
+                # --- Cotação ---
+                val_cotacao = data.get('Cotação', 0)
+                c1.metric("Cotação", f"R$ {val_cotacao:.2f}" if isinstance(val_cotacao, (int, float)) else "N/A")
                 
-                # Dividend Yield com lógica de cor
-                dy = data.get('DY', 0)
-                m2.metric("Dividend Yield (12m)", f"{dy:.2f}%" if dy else "N/A")
+                # --- Dividend Yield (Onde dava o erro) ---
+                val_dy = data.get('DY', 0)
+                c2.metric("DY (12m)", f"{val_dy:.2f}%" if isinstance(val_dy, (int, float)) else "N/A")
                 
-                # P/VP com interpretação visual
-                pvp = data.get('P/VP', 0)
-                delta_pvp = "Desconto" if pvp < 1 else "Ágio" if pvp > 1 else "Preço Justo"
-                m3.metric("P/VP", f"{pvp:.2f}" if pvp else "N/A", delta=delta_pvp, delta_color="normal")
+                # --- P/VP ---
+                val_pvp = data.get('P/VP', 0)
+                c3.metric("P/VP", f"{val_pvp:.2f}" if isinstance(val_pvp, (int, float)) else "N/A")
                 
-                # Performance
-                perf = data.get('Performance_12m', 0)
-                m4.metric("Performance (12m)", f"{perf:.2f}%")
-
-                st.markdown("---")
-
-                # Seção de Detalhes e Tese
-                tab_resumo, tab_tecnico = st.tabs(["📖 Tese de Investimento", "📊 Indicadores Técnicos"])
+                # --- Performance ---
+                val_perf = data.get('Performance_12m', 0)
+                c4.metric("Perf. 12m", f"{val_perf:.2f}%" if isinstance(val_perf, (int, float)) else "N/A")
                 
-                with tab_resumo:
-                    st.markdown("#### Resumo Operacional")
-                    st.write(data.get('Resumo', 'Descrição não disponível no momento.'))
-                
-                with tab_tecnico:
-                    st.write("Dados detalhados de liquidez e composição de carteira serão exibidos aqui.")
-
-            except Exception as e:
-                st.error("Ocorreu um erro na comunicação com a base de dados.")
-                st.caption(f"Detalhes técnicos: {str(e)}")
-
-    st.markdown("---")
-    st.caption("⚙️ Fonte: B3 / Provedores de Dados de Mercado via API.")
+                with st.expander("📖 Tese de Investimento"):
+                    st.write(data.get('Resumo', 'Resumo não disponível.'))
