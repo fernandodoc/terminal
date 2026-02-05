@@ -136,6 +136,8 @@ Módulo dedicado a Fundos Imobiliários:
 
 - Interface limpa, direta e funcional
 
+- Integração e-mail via https://formspree.io/
+
 O foco não é complexidade técnica, mas clareza, usabilidade e impacto real.
 
 > **Nota:** Este projeto é gratuito e sempre será.
