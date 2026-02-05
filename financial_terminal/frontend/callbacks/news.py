@@ -62,6 +62,7 @@ def render_news_portal():
             ("OpenBB", "https://openbb.co/solutions/"),
             ("StatusInvest", "https://statusinvest.com.br/"),
             ("Fundamentus", "https://www.fundamentus.com.br/"),
+            ("Mais Retorno", "https://maisretorno.com/"),
             ("Brasil Indicadores", "https://brasilindicadores.com.br/"),
             ("Instituto Assaf", "https://www.institutoassaf.com.br/"),
             ("Clube FII", "https://www.clubefii.com.br/"),
@@ -129,6 +130,7 @@ def render_news_portal():
 
     st.markdown("---")
     st.caption("🔒 **Nota de Segurança:** Todos os links abrem em abas externas para garantir a integridade da sua sessão atual.")
+
 
 
 
