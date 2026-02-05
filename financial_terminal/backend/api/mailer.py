@@ -4,6 +4,11 @@ def enviar_dados_ao_especialista(dados):
     # CERTIFIQUE-SE de que a URL termina com o ID do seu formulário
     # Exemplo: https://formspree.io/f/mqkvpkn
     FORMSPREE_URL = "https://formspree.io/f/xgolwpkw"
+
+    # Headers explicitos ajudam o servidor do Streamlit a passar a requisição
+    headers = {
+        "Accept": "application/json"
+    }
     
     try:
         # Adicionamos headers para garantir que a API entenda que é um formulário
