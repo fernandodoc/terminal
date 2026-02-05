@@ -58,7 +58,7 @@ Monitoramento em tempo real de indicadores macroeconômicos oficiais:
 
 - Fontes como Banco Central do Brasil (BCB) e Yahoo Finance
 
-- ************************************************************************
+************************************************************************
 
 📊 Análise de Ativos
 
