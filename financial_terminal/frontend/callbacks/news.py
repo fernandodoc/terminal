@@ -52,7 +52,7 @@ def render_news_portal():
     tab_fund, tab_br, tab_global = st.tabs([
         "🔍 Fundamentos", 
         "🇧🇷 Brasil", 
-        "🌎 Globais"
+        "🌎 Global"
     ])
 
     # --- TAB 1: FUNDAMENTOS ---
@@ -129,6 +129,7 @@ def render_news_portal():
 
     st.markdown("---")
     st.caption("🔒 **Nota de Segurança:** Todos os links abrem em abas externas para garantir a integridade da sua sessão atual.")
+
 
 
 
