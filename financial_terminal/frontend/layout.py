@@ -47,7 +47,8 @@ def render_header():
     col1, col2 = st.columns([4, 1])
     with col1:
         st.title("💎 OpenMacroBase")
-        st.caption("Inteligência financeira para o seu dia a dia | High Net Worth Analytics")
+        st.caption("Inteligência financeira para o seu dia a dia")
     with col2:
         st.write("") # Espaçador
+
         st.status("Market Open", state="running")
