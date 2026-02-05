@@ -50,5 +50,3 @@ def render_header():
         st.caption("Inteligência financeira para o seu dia a dia")
     with col2:
         st.write("") # Espaçador
-
-        st.status("Market Open", state="running")
