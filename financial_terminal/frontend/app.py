@@ -33,6 +33,7 @@ from callbacks.valuation import render_valuation_analysis
 from callbacks.previdencia import render_previdencia
 from callbacks.educacao import render_education_module
 from frontend.callbacks.letter import render_manager_letter
+from callbacks.academy import render_academy_module
 
 # Configuração Global
 st.set_page_config(
@@ -68,7 +69,8 @@ def main():
         "🏦 Títulos Públicos": "tesouro_direto",
         "🛡️ Previdência": "previdencia",
         "🧪 Backtesting": "backtesting",
-        "🎓 Educação Financeira": "educacao"
+        "🎓 Educação Financeira": "educacao",
+        "📚 Academy": "academy"
     }
 
     if 'page' not in st.session_state:
@@ -137,6 +139,8 @@ def main():
         render_backtesting_analysis()
     elif current_page == "educacao":
         render_education_module()
+    elif current_page == "academy":
+        render_academy_module()
 
 
     st.sidebar.markdown("---")
@@ -189,6 +193,7 @@ if __name__ == "__main__":
     st.link_button("Github", "https://github.com/fernandodoc/terminal", use_container_width=False)
     
     
+
 
 
 
