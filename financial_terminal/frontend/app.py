@@ -47,7 +47,7 @@ def main():
     
     # --- SIDEBAR NAVEGAÇÃO ---
     st.sidebar.markdown("<h1 style='text-align: center;'>🛡️</h1>", unsafe_allow_html=True)
-    st.sidebar.markdown("<h3 style='text-align: center; color: #f3d007;'>TERMINAL PRO VISION</h3>", unsafe_allow_html=True)
+    st.sidebar.markdown("<h3 style='text-align: center; color: #f3d007;'>ELITE PRO VISION</h3>", unsafe_allow_html=True)
         
     # Mapeamento atualizado com ETFs e FIIs
     menu_options = {
@@ -193,6 +193,7 @@ if __name__ == "__main__":
     st.link_button("Github", "https://github.com/fernandodoc/terminal", use_container_width=False)
     
     
+
 
 
 
