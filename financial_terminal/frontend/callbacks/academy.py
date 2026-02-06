@@ -199,9 +199,9 @@ def render_academy_module():
     with col_m:
         st.subheader("💡 Mentoria Individualizada")
         st.write("""
-            Além do conteúdo técnico, ofereço acompanhamento individual para 
-            investidores que buscam alinhar sua gestão patrimonial a objetivos complexos, 
-            garantindo segurança jurídica, eficiência sucessória e performance ajustada ao risco.
+            Além do conteúdo técnico, os investidores recebem acompanhamento individual para 
+            alinhar sua gestão patrimonial a objetivos complexos, garantindo segurança jurídica, 
+            eficiência sucessória e performance ajustada ao risco.
         """)
     with col_t:
         if st.button("Saber mais sobre Mentoria"):
